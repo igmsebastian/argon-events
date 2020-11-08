@@ -1,0 +1,180 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "ARGON - EVENTS - API SPECIFICATIONS",
+        "description": "An API documentation used for Argon Events App",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "https://argon.test/api/v1/",
+            "description": "Local Server"
+        },
+        {
+            "url": "http://vtuberland.commude.biz/api/v1/",
+            "description": "Dev Server"
+        }
+    ],
+    "paths": {
+        "/events/latest": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get the latest event.",
+                "description": "Get the latest event.",
+                "operationId": "App\\Http\\Controllers\\API\\EventController::latest",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/event"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        },
+        "/events": {
+            "post": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Create new Event.",
+                "description": "Create new Event.",
+                "operationId": "App\\Http\\Controllers\\API\\EventController::store",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "started_at",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "ended_at",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "days",
+                        "in": "query",
+                        "required": true,
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "field"
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/event"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Resource Not Found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "event": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "name": {
+                            "description": "Transform the resource into an array.",
+                            "type": "string",
+                            "format": "string",
+                            "example": "Workout Days"
+                        },
+                        "started_at": {
+                            "description": "Transform the resource into an array.",
+                            "type": "string",
+                            "format": "string",
+                            "example": "11/01/2020"
+                        },
+                        "ended_at": {
+                            "description": "Transform the resource into an array.",
+                            "type": "string",
+                            "format": "string",
+                            "example": "11/21/2020"
+                        },
+                        "days": {
+                            "$ref": "#/components/schemas/eventDays"
+                        },
+                        "dates": {
+                            "$ref": "#/components/schemas/eventDates"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "eventDays": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "wednesday": {
+                            "description": "Transform the resource into an array."
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "eventDates": {
+                "type": "array",
+                "items": {
+                    "properties": {
+                        "title": {
+                            "description": "Transform the resource into an array.",
+                            "type": "string",
+                            "format": "string",
+                            "example": "Workout Days"
+                        },
+                        "date": {
+                            "description": "Transform the resource into an array.",
+                            "type": "string",
+                            "format": "string",
+                            "example": "11/01/2020"
+                        }
+                    },
+                    "type": "object"
+                }
+            }
+        }
+    }
+}
