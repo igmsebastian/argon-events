@@ -29,6 +29,7 @@ Vue.use(SweetAlert);
 Vue.component('Events', require('./pages/Events.vue').default);
 Vue.component('DatePicker', bsDatePicker)
 Vue.component('Calendar', require('./components/Calendar.vue').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

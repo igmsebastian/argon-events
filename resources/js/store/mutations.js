@@ -1,5 +1,5 @@
 export default {
-    updateEvent (state, event){
-        state.event = event
-    }
+    latestEvent(state,data) {
+        return state.event = data
+    },
 }

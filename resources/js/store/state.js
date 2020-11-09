@@ -1,3 +1,8 @@
 export default {
-    event: []
+    event: {
+        name: "",
+        stared_at: "",
+        ended_at: "",
+        days: [],
+    }
 }

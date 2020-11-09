@@ -60,7 +60,7 @@ class EventController extends Controller
      * )
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \App\Http\Resources\EventResource
      */
     public function store(CreateRequest $request)
     {
