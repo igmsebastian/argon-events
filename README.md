@@ -193,7 +193,7 @@
     <img src="https://github.com/igmsebastian/argon-events/blob/feature/add_documentation/storage/screenshots/2.PNG?raw=true" width="800">
 </p>
 
-3. Event Page
+3. Event Page Creation Failed
 <p align="center">
     <img src="https://github.com/igmsebastian/argon-events/blob/feature/add_documentation/storage/screenshots/3.PNG?raw=true" width="800">
 </p>
