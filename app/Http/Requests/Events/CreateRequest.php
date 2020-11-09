@@ -68,7 +68,7 @@ class CreateRequest extends FormRequest
     /**
      * Validate if value is a date
      *
-     * @return Boolean
+     * @return boolean
      */
     private function checkDate($date, $format = 'm/d/Y')
     {

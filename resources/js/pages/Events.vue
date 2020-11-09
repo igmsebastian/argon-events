@@ -114,7 +114,7 @@ export default {
         this.$store.dispatch("latestEventFromDatabase")
     },
     computed: {
-        ...mapGetters(['getEvent', 'getErrors']),
+        ...mapGetters(['getEvent']),
 
         event() {
             if (Object.keys(this.$store.state.event).length === 0) {

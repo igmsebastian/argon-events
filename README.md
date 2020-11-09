@@ -179,3 +179,21 @@
 
 1. Unit Testing 
    > Execute `php artisan test`
+
+
+## Screenshots
+
+1. Event Page
+<p align="center">
+    <img src="https://github.com/igmsebastian/argon-events/blob/feature/add_documentation/storage/screenshots/1.PNG?raw=true" width="800">
+</p>
+
+2. Event Page Creation Success
+<p align="center">
+    <img src="https://github.com/igmsebastian/argon-events/blob/feature/add_documentation/storage/screenshots/2.PNG?raw=true" width="800">
+</p>
+
+3. Event Page Creation Failed
+<p align="center">
+    <img src="https://github.com/igmsebastian/argon-events/blob/feature/add_documentation/storage/screenshots/3.PNG?raw=true" width="800">
+</p>

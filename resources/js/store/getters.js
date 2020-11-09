@@ -1,5 +1,5 @@
 export default {
-    getEventFormGetters(state){
+    getEvent(state){
         return state.event
-    }
+     }
 }
