@@ -16,7 +16,7 @@ class EventTest extends TestCase
      */
     public function testGetLatestEvent()
     {
-        $response = $this->get(config('app.url')."/api/events/latest");
+        $response = $this->get(config('app.url')."/api/v1/events/latest");
 
         $response->assertStatus(200);
     }
@@ -38,7 +38,7 @@ class EventTest extends TestCase
             ]
         ];
 
-        $response = $this->json('POST', config('app.url')."/api/events", $data);
+        $response = $this->json('POST', config('app.url')."/api/v1/events", $data);
 
         $response->assertStatus(201);
     }
